@@ -1,12 +1,3 @@
-'''from flask import Flask, render_template, url_for, redirect, request
-from flask_sqlalchemy import SQLAlchemy
-
-
-app = Flask(__name__)
-db = SQLAlchemy(app)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False'''
-
 from app import db
 import json
 
@@ -19,7 +10,7 @@ class Missao(db.Model):
     estado = db.Column(db.String)
     carga_util = db.Column(db.String)
     duracao = db.Column(db.String)
-    custo = db.Column(db.Real)
+    custo = db.Column(db.Float)
     status = db.Column(db.String)
     tripulacao = db.Column(db.String)
     
